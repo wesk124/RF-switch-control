@@ -72,35 +72,313 @@ switch (pinNum) {
 */
 
 
+
 void loop() {
   // put your main code here, to run repeatedly:
-  /*
+  
   if (Serial.available() > 0) {
     //TODO add control pin for sp8t;
      intRead = Serial.read();
      if (intRead == 49) {
         Serial.print("I get sp4t rf1 ");
         Serial.println(intRead, DEC);
-        
-        digitalWrite(9, LOW);
-        digitalWrite(10, LOW);
+        // sp8t1
+        digitalWrite(11, HIGH);
+        digitalWrite(10, HIGH);
+        digitalWrite(12, HIGH);
         digitalWrite(13, HIGH);
-      }
+        // sp8t2
+        digitalWrite(6, HIGH);
+        // sp4t
+        digitalWrite(5, HIGH);
+		digitalWrite(4, HIGH); //v1
+        digitalWrite(3, LOW); //v2
+
+      } // end of rf1
       else if (intRead == 50) {
         Serial.print("I get sp4t rf2 ");
         Serial.println(intRead, DEC);
-        digitalWrite(9, HIGH);
+        // sp8t1
+        digitalWrite(11, HIGH);
         digitalWrite(10, LOW);
+        digitalWrite(12, HIGH);
         digitalWrite(13, HIGH);
-      }
+
+        // sp8t2
+
+        digitalWrite(6, HIGH);
+        // sp4t
+        
+        digitalWrite(5, HIGH);
+		digitalWrite(4, HIGH); //v1
+        digitalWrite(3, LOW); //v2
+      }// end of rf2
+
+      else if (intRead == 51) {
+        Serial.print("I get sp4t rf3 ");
+        Serial.println(intRead, DEC);
+        // sp8t1
+        digitalWrite(11, HIGH);
+        digitalWrite(10, HIGH);
+        digitalWrite(12, LOW);
+        digitalWrite(13, HIGH);
+
+        // sp8t2
+
+        digitalWrite(6, HIGH);
+        // sp4t
+        
+        digitalWrite(5, HIGH);
+		digitalWrite(4, HIGH); //v1
+        digitalWrite(3, LOW); //v2
+      }// end of rf3
+      else if (intRead == 52) {
+        Serial.print("I get sp4t rf4 ");
+        Serial.println(intRead, DEC);
+        // sp8t1
+        digitalWrite(11, HIGH);
+        digitalWrite(10, LOW);
+        digitalWrite(12, LOW);
+        digitalWrite(13, HIGH);
+
+        // sp8t2
+
+        digitalWrite(6, HIGH);
+        // sp4t
+        
+        digitalWrite(5, HIGH);
+		digitalWrite(4, HIGH); //v1
+        digitalWrite(3, LOW); //v2
+      }// end of rf4
+      else if (intRead == 53) {
+        Serial.print("I get sp4t rf5 ");
+        Serial.println(intRead, DEC);
+        // sp8t1
+        digitalWrite(11, HIGH);
+        digitalWrite(10, HIGH);
+        digitalWrite(12, HIGH);
+        digitalWrite(13, LOW);
+
+        // sp8t2
+
+        digitalWrite(6, HIGH);
+        // sp4t
+        
+        digitalWrite(5, HIGH);
+		digitalWrite(4, HIGH); //v1
+        digitalWrite(3, LOW); //v2
+      }// end of rf5
+      else if (intRead == 54) {
+        Serial.print("I get sp4t rf6 ");
+        Serial.println(intRead, DEC);
+        // sp8t1
+        digitalWrite(11, HIGH);
+        digitalWrite(10, LOW);
+        digitalWrite(12, HIGH);
+        digitalWrite(13, LOW);
+
+        // sp8t2
+
+        digitalWrite(6, HIGH);
+        // sp4t
+        digitalWrite(5, HIGH);
+		digitalWrite(4, HIGH); //v1
+        digitalWrite(3, LOW); //v2
+        
+      }// end of rf6
+      else if (intRead == 55) {
+        Serial.print("I get sp4t rf7 ");
+        Serial.println(intRead, DEC);
+        // sp8t1
+        digitalWrite(11, HIGH);
+        digitalWrite(10, HIGH);
+        digitalWrite(12, LOW);
+        digitalWrite(13, LOW);
+
+        // sp8t2
+
+        digitalWrite(6, HIGH);
+        // sp4t
+        digitalWrite(5, HIGH);
+		digitalWrite(4, HIGH); //v1
+        digitalWrite(3, LOW); //v2
+        
+      }// end of rf7
+      else if (intRead == 56) {
+        Serial.print("I get sp4t rf8 ");
+        Serial.println(intRead, DEC);
+        // sp8t1
+        digitalWrite(11, HIGH);
+        digitalWrite(10, LOW);
+        digitalWrite(12, LOW);
+        digitalWrite(13, LOW);
+
+        // sp8t2
+
+        digitalWrite(6, HIGH);
+        // sp4t
+        digitalWrite(5, HIGH);
+		digitalWrite(4, HIGH); //v1
+        digitalWrite(3, LOW); //v2
+        
+      }// end of rf8
+      else if (intRead == 57) {
+        Serial.print("I get sp4t rf9 ");
+        Serial.println(intRead, DEC);
+        // sp8t1
+        digitalWrite(11, HIGH);
+
+        // sp8t2
+
+        digitalWrite(6, HIGH);
+        digitalWrite(7, HIGH);
+        digitalWrite(8, HIGH);
+        digitalWrite(9, HIGH);
+        // sp4t
+        digitalWrite(5, HIGH);
+		digitalWrite(4, LOW); //v1
+        digitalWrite(3, LOW); //v2
+        
+      }// end of rf9
+      else if (intRead == 97) {
+        Serial.print("I get sp4t rf10 ");
+        Serial.println(intRead, DEC);
+        // sp8t1
+        digitalWrite(11, HIGH);
+
+        // sp8t2
+        
+        digitalWrite(6, HIGH);
+        digitalWrite(7, LOW);
+        digitalWrite(8, HIGH);
+        digitalWrite(9, HIGH);
+        // sp4t
+        digitalWrite(5, HIGH);
+		digitalWrite(4, LOW); //v1
+        digitalWrite(3, LOW); //v2
+        
+      }// end of rf10
+
+      else if (intRead == 98) {
+        Serial.print("I get sp4t rf11 ");
+        Serial.println(intRead, DEC);
+        // sp8t1
+        digitalWrite(11, HIGH);
+
+        // sp8t2
+
+        digitalWrite(6, HIGH);
+        digitalWrite(7, HIGH);
+        digitalWrite(8, LOW);
+        digitalWrite(9, HIGH);
+        // sp4t
+        digitalWrite(5, HIGH);
+		digitalWrite(4, LOW); //v1
+        digitalWrite(3, LOW); //v2
+
+      }// end of rf11
+     else if (intRead == 99) {
+        Serial.print("I get sp4t rf12 ");
+        Serial.println(intRead, DEC);
+        // sp8t1
+        digitalWrite(11, HIGH);
+
+        // sp8t2
+
+        digitalWrite(6, HIGH);
+        digitalWrite(7, LOW);
+        digitalWrite(8, LOW);
+        digitalWrite(9, HIGH);
+        // sp4t
+        digitalWrite(5, HIGH);
+		digitalWrite(4, LOW); //v1
+        digitalWrite(3, LOW); //v2
+
+      }// end of rf12
+     else if (intRead == 100) {
+        Serial.print("I get sp4t rf13 ");
+        Serial.println(intRead, DEC);
+        // sp8t1
+        digitalWrite(11, HIGH);
+
+        // sp8t2
+
+        digitalWrite(6, HIGH);
+        digitalWrite(7, HIGH);
+        digitalWrite(8, HIGH);
+        digitalWrite(9, LOW);
+        // sp4t        
+        digitalWrite(5, HIGH);
+		digitalWrite(4, LOW); //v1
+        digitalWrite(3, LOW); //v2
+
+      }// end of rf13
+     else if (intRead == 101) {
+        Serial.print("I get sp4t rf14 ");
+        Serial.println(intRead, DEC);
+        // sp8t1
+        digitalWrite(11, HIGH);
+
+        // sp8t2
+        digitalWrite(6, HIGH);
+        digitalWrite(7, LOW);
+        digitalWrite(8, HIGH);
+        digitalWrite(9, LOW);
+        // sp4t
+        digitalWrite(5, HIGH);
+		digitalWrite(4, LOW); //v1
+        digitalWrite(3, LOW); //v2
+
+      }// end of rf14
+     else if (intRead == 102) {
+        Serial.print("I get sp4t rf15 ");
+        Serial.println(intRead, DEC);
+        // sp8t1
+        digitalWrite(11, HIGH);
+
+        // sp8t2
+        digitalWrite(6, HIGH);
+        digitalWrite(7, HIGH);
+        digitalWrite(8, LOW);
+        digitalWrite(9, LOW);
+        // sp4t
+        digitalWrite(5, HIGH);
+		digitalWrite(4, LOW); //v1
+        digitalWrite(3, LOW); //v2
+
+      }// end of rf15
+     else if (intRead == 103) {
+        Serial.print("I get sp4t rf16 ");
+        Serial.println(intRead, DEC);
+        // sp8t1
+        digitalWrite(11, HIGH);
+
+        // sp8t2
+        digitalWrite(6, HIGH);
+        digitalWrite(7, LOW);
+        digitalWrite(8, LOW);
+        digitalWrite(9, LOW);
+        // sp4t
+        digitalWrite(5, HIGH);
+		digitalWrite(4, LOW); //v1
+        digitalWrite(3, LOW); //v2
+
+      }// end of rf16 
+
       else {
-         digitalWrite(13, LOW);
-      }*/
 
-      digitalWrite(11, HIGH);
-
+		// Shutdown everything...
+        Serial.print("Shutdown.... ");
+        digitalWrite(11, LOW);
+        digitalWrite(6, LOW);
+		digitalWrite(5, LOW);
+      }
+  }
+}
       
- }
+     
+      
+
   
 
 
